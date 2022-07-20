@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">	
+        <div class="user-container">
+
+        </div>	
+        <div class="quote-container">
+
+        </div>	
+        <div class="content-container">	
+            <div class="pokemon-container"></div>	
+            <div class="meat-container"></div>	
+        </div>	
+        <div class="friends">	
+            <h4>Friends</h4>	
+            <div class="friends-container">	
+
+            </div>	
+        </div>	
+        <div>
+        </div>
+        <div class="buttons">	
+            <button id="loadData">Load User Data</button>	
+            <button id="renderData">Display User</button>
+            <button id="saveLocalStorage">Save your own page</button>	
+            <button id="loadLocalStorage">Load user page from localStorage</button>
+        </div>	
+    </div>
+
+    <script id="RenderMainPersonData" type="text/x-handlebars-template">
+        <img src={{imgSRC}} id="profile-pic">
+        <label class="user-info">{{firstName}}</label class="user-info">
+        <label class="user-info">{{lastName}}</label class="user-info">
+        <label class="user-info">{{city}} , </label class="user-info">
+        <label class="user-info">{{state}}</label class="user-info">
+    </script>
+    <script id="RenderPekomenData" type="text/x-handlebars-template">
+        <h3 id="pokemon-text">{{name}}</h3>
+        <img id="pokemon-image" src={{image}}>
+    </script>
+    <script id="RenderQutoData" type="text/x-handlebars-template">
+        <label>Favorite Quote</label>
+        <p id="QQ">{{Quote}}</p>
+        <h6>-Kanye West</h6>
+    </script>
+    <script id="RenderFetchIpsum" type="text/x-handlebars-template">
+        <p class="meat-text">about me :</p>
+        <p class="meat-text">{{Ipsum}}</p>
+    </script>
+    <script id="RenderFriends" type="text/x-handlebars-template">
+        {{#each this}}
+        <h3>{{firstName}}-{{lastName}}</h3>
+        {{/each}}
+      </script>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="APImanager.js"></script>
+    <script src="Render.js"></script>
+    <script src="main.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</body>
+</html>
